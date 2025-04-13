@@ -26,7 +26,7 @@ def start_consumer():
                 enable_auto_commit=True,
                 group_id=GROUP_ID,
                 value_deserializer=lambda m: json.loads(m.decode('utf-8')),
-                consumer_timeout_ms=10000
+                consumer_timeout_ms=None
             )
             logger.info("🚀 Consumer is ready and listening for messages...")
 
