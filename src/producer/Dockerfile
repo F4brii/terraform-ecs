@@ -8,7 +8,7 @@ WORKDIR /app
 COPY main.py .
 
 # Instalar dependencias necesarias
-RUN pip install --no-cache-dir fastapi uvicorn kafka-python pydantic
+RUN pip install --no-cache-dir fastapi uvicorn[standard] kafka-python pydantic
 
 # Exponer el puerto por el que escuchará Uvicorn
 EXPOSE 8000
